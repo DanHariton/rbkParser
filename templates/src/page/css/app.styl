@@ -1,0 +1,476 @@
+@import "~startbootstrap-sb-admin-2/vendor/fontawesome-free/css/all.css"
+@import "~normalize.css/normalize.css"
+@import "~bootstrap/dist/css/bootstrap.css"
+@import '~select2/dist/css/select2.css'
+@import "~@ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4.css"
+
+@font-face
+  font-family MonseratBold
+  src url("./font/Montserrat-Bold.otf")
+
+@font-face
+  font-family MonseratRegular
+  src url('./font/Montserrat-Regular.otf')
+
+@font-face
+  font-family MonseratItalic
+  src url("./font/Montserrat-ExtraLightItalic.otf")
+
+body
+  font-family MonseratRegular
+  color #282828
+
+#banner-block
+  img
+    width 100%
+
+#manufacture
+  h1
+    font-family MonseratBold
+    letter-spacing 3px
+    color: #282828;
+
+.car-models
+  margin-bottom 60px !important
+  h1
+    font-weight bold
+    text-align center
+    margin-top 3%
+    font-size 37px
+
+.car-links
+  display flex
+  flex-direction row
+  justify-content space-around
+
+.model-link
+  text-decoration underline
+  color #282828
+  font-size 20px
+  p
+    font-size 18px
+  &:hover
+    color #e30613
+  img
+    max-width 50%
+    margin auto
+
+
+.toyota-cars
+  img
+    width 170px
+
+.other-cars
+  i
+    font-size 150px
+
+.searching-level
+  display flex
+  flex-direction row
+  justify-content space-between
+  margin-bottom 60px
+
+#items
+  .about-car
+    margin-top 10px
+    display flex
+    justify-content space-between
+    font-weight bold
+    cursor default
+  .car-model
+    font-family MonseratBold
+    letter-spacing 1px
+    color #282828
+    margin-bottom 0
+    font-weight 400
+  .car-price
+    font-family MonseratBold
+    letter-spacing 1px
+    color #282828
+    margin-bottom 0
+    font-weight 400
+  .car-manufaktura
+    display flex
+    justify-content space-between
+    cursor default
+    font-size 15px
+    .car-price-discount
+      text-align end
+      p:last-child
+        font-family MonseratBold
+    p
+      color #282828
+      margin 0
+  .link-car
+    display flex
+    flex-direction row
+    justify-content flex-end
+    margin-top 12px
+    padding-bottom 50px
+    color #FFFFFF
+    @media (max-width 768px)
+      padding-bottom 25px
+    a
+      padding 17px 60px
+      font-size 15px
+      text-decoration none
+      color #ffffff
+      transition background-color 0.4s
+      background-color #e30613
+      border 1px solid #e30613
+      &:hover
+        background-color #c40611
+        border 1px solid #c40611
+        text-decoration underline
+
+.searching-params-block
+  margin-bottom 60px !important
+  .searching-selector
+    border 2px solid #000
+    color #000
+    border-radius 0
+    box-shadow none
+
+.search-car-form
+  .container-form-params
+    display flex
+    flex-direction row
+    justify-content space-around
+  .submit-search-form
+    display flex
+    flex-direction row
+    justify-content flex-end
+    width 98.4%
+  .searching-params-forms
+    width 30%
+    .search-more-params-container
+      display flex
+      justify-content flex-end
+
+.select2-container--bootstrap4
+  .select2-results__option--highlighted
+    background-color #e30613 !important
+
+.select2-container--bootstrap4
+  .select2-results__option--highlighted
+    .select2-results__option[aria-selected="true"]
+      background-color #e30613 !importantcar-manufaktura
+
+.submit-search
+  margin-top 20px
+  color #ffffff
+  background-color #e30613
+  border 1px solid #e30613
+  border-radius 0
+  padding 15px 60px
+  transition background-color 0.4s
+  &:hover
+    background-color #c40611
+    border 1px solid #c40611
+    text-decoration underline
+
+#search-more-params
+  color #282828
+  font-family MonseratBold
+  text-decoration underline
+  letter-spacing 1px
+  img
+    width 14px
+    height 8px
+    margin-bottom 2.78px
+
+.container-custom
+  width 85%
+  margin auto
+
+.select2-container--bootstrap4
+  .select2-selection
+    box-shadow none !important
+    border 2px solid #282828 !important
+    border-radius 0
+
+.select2-container--bootstrap4
+  .select2-container--focus
+    .select2-selection
+      box-shadow none !important
+      border-color #282828 !important
+
+.select2-container--bootstrap4 .select2-selection--single .select2-selection__arrow b
+  border-width 8px 7px 0 7px
+  margin-left -12px
+  margin-top -4px
+
+header img
+  width 100%
+  height auto
+
+@media (min-width: 1200px)
+  .main-container
+    max-width 1500px
+
+.margin-bottom-30
+  margin-bottom 30px
+
+.margin-bottom-50
+  margin-bottom 50px
+
+.margin-bottom-70
+  margin-bottom 70px
+
+.expanded-search
+  max-height 0
+  overflow hidden
+  transition max-height 0.5s ease-in-out
+
+.expanded-search.visible
+  max-height 400px
+
+#about-car
+  margin-top 50px
+  display flex
+  flex-direction row
+
+.link-back
+  width 80%
+  margin auto
+  display flex
+  font-size 15px
+  a
+    color #282828
+    opacity 0.7
+    text-transform uppercase
+    letter-spacing: 1px;
+  a:hover
+    opacity 1
+    text-decoration none
+    color #282828
+  p
+    text-decoration underline
+    letter-spacing: 1px;
+    cursor default
+
+.lef-side
+  width 57%
+  .car-photos
+    display flex
+    flex-direction column
+    align-items center
+    .smallest-photo-car
+      display flex
+      flex-direction column
+      justify-content center
+      align-items center
+      width 80%
+      margin-top 15px
+      .container-level-photo
+        display flex
+        flex-direction row
+        justify-content space-between
+        margin-bottom 15px
+    #preview-photo
+      width 80%
+
+.mark-car
+  width 80%
+  margin auto
+  padding 20px 0
+  border-bottom 1px solid #282828
+  p
+    color #282828
+
+.preview-photo-small
+  width 24%
+
+.social-car
+  width 80%
+  margin auto
+  padding 30px 0
+  border-bottom 1px solid #282828
+  h2
+    font-weight bold
+    font-size 20px
+    color #282828
+  .social-networks
+    margin-top 20px
+    margin-bottom 20px
+    i
+      color #282828
+      font-size 45px
+      margin-right 2%
+  a
+    color #282828
+    font-size 12px
+    text-decoration underline
+
+.why-autoeder
+  width 80%
+  margin auto
+  border-bottom 1px solid #282828
+  padding 30px 0
+  h2
+    font-family MonseratBold
+    margin-bottom 15px
+    font-size 24px
+    color #282828
+  ul
+    padding-left 16px
+    li
+      margin-bottom 7px
+
+.feedback-user-car
+  width 80%
+  margin auto
+  padding 30px 0
+  h2
+    font-family MonseratBold
+    margin-bottom 15px
+    font-size 24px
+    color #282828
+  .comment-user
+    font-family MonseratItalic
+    font-size 25px
+  .user
+    text-align end
+
+.right-side
+  width 39%
+
+.container-right-side
+  width 98%
+  margin-top 34px
+
+.detail-manufakrura-car
+  margin 0
+  text-transform uppercase
+  font-family MonseratBold
+  font-size 15px
+
+.detail-price
+  display flex
+  flex-direction row
+  justify-content space-between
+  align-items end
+  p:first-child
+    font-family MonseratBold
+    margin-bottom 8px
+  p:last-child
+    font-family MonseratBold
+    font-size 30px
+    margin 0
+
+.detail-discount
+  text-align end
+  p
+    margin 0
+  p:last-child
+    font-family MonseratBold
+
+.question-about-car
+  margin-top 50px
+  text-align end
+  padding-bottom 80px
+  border-bottom 1px solid #282828
+  a
+    padding 20px 65px
+    background-color #e30613
+    border 1px solid #e30613
+    color #ffffff
+  a:hover
+    background-color #c40611
+    border 1px solid #c40611
+
+.detail-model-car
+  font-family MonseratBold
+  margin-bottom 30px
+  font-weight 500
+
+.complect
+  border-bottom 1px solid #282828
+
+.complect-detail
+  display flex
+  flex-direction row
+  justify-content space-between
+  border-bottom 1px solid #d8dee2
+  p
+    margin 0
+    padding 10px 0
+  p:last-child
+    font-family MonseratBold
+
+.complect-detail:last-child
+  border-bottom none
+  margin-bottom 30px
+
+.complect-detail:first-child
+  margin-top 30px
+
+.complect-choise
+  border-bottom 1px solid #282828
+  h2
+    margin-top 25px
+    font-family MonseratBold
+    margin-bottom 15px
+    font-size 24px
+    color #282828
+  ul
+    padding-left 16px
+    margin-bottom 30px
+    li
+      margin-bottom 7px
+
+.complect-in-price
+  border-bottom 1px solid #282828
+  h2
+    margin-top 25px
+    font-family MonseratBold
+    margin-bottom 15px
+    font-size 24px
+    color #282828
+  ul
+    padding-left 16px
+    margin-bottom 30px
+    li
+      margin-bottom 7px
+
+.standart-complect
+  h2
+    margin-top 25px
+    font-family MonseratBold
+    margin-bottom 25px
+    font-size 24px
+    color #282828
+  .standart-complect-name
+    font-family MonseratBold
+
+.order-test-drive-button
+  text-align end
+  margin-top 70px
+
+.order-test-drive
+  padding 20px 65px
+  background-color #e30613
+  border 1px solid #e30613
+  color #ffffff
+
+.order-test-drive:hover
+  background-color #c40611
+  border 1px solid #c40611
+  color #ffffff
+
+.detail-contacts
+  h2
+    margin-top 80px
+    font-family MonseratBold
+    margin-bottom 25px
+    font-size 24px
+    color #282828
+  .name-sale
+    font-family MonseratBold
+    margin-bottom 0
+  .position-sale
+    margin-bottom 10px
+  .sale-contact
+    margin-bottom 0
+  .last-sale-contact
+    margin-bottom 20px
