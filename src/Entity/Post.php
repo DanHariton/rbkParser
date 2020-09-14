@@ -123,30 +123,4 @@ class Post
 
         return $this;
     }
-
-    public function setPostsData($article)
-    {
-        if (isset($article->find('h1.article__header__title-in')[0]->plaintext)) {
-            $this->setTittle(trim($article->find('h1.article__header__title-in')[0]->plaintext));
-        }
-        if (isset($article->find('div.article__text__overview')[0]->plaintext)) {
-            $this->setOverview(trim($article->find('div.article__text__overview')[0]->plaintext));
-        }
-        if (isset($article->find('img.article__main-image__image')[0]->src)) {
-            $this->setImage(trim($article->find('img.article__main-image__image')[0]->src));
-        }
-        $i = 0;
-        foreach ($article->find('div.article__text p, ul, div.gallery_vertical') as $text) {
-            $this->content[$i] = preg_replace('| +|', ' ', trim($text->plaintext));
-            $i++;
-        }
-        if (isset($article->find('div.article__authors')[0]->plaintext)) {
-            $this->author = preg_replace('| +|', ' ', trim($article->find('div.article__authors')[0]->plaintext));
-        }
-        $n = 0;
-        foreach ($article->find('a.article__tags__link') as $category) {
-            $this->categories[$n] = str_replace(', ', '', $category->plaintext);
-            $n++;
-        }
-    }
 }
