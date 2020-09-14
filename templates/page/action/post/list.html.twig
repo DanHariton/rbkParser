@@ -1,0 +1,16 @@
+{% extends 'page/layout.html.twig' %}
+
+{% block title %}{{ tittle }}{% endblock %}
+
+{% block body %}
+    {% include 'page/components/navbar.html.twig' %}
+    <section class="container">
+        <h1 class="font-weight-bold text-center mt-5">Последние новости</h1>
+        {% for post in posts %}
+            <div class="p-3 mb-4 bg-light text-dark rounded">
+                <a class="h4" href="{{ path('page_post_show', {'post': post.id}) }}">{{ post.tittle }}</a>
+                <p>{{ post.overview|slice(0, 200) }} ...</p>
+            </div>
+        {% endfor %}
+    </section>
+{% endblock %}

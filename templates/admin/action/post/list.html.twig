@@ -1,0 +1,41 @@
+{% extends 'admin/layout.nav.html.twig' %}
+
+{% block content %}
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ label }}">
+                {{ message|trans() }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h4 class="m-0 font-weight-bold text-primary">Новости</h4>
+        </div>
+        <div class="card-body">
+            <table id="table" class="table">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Название</th>
+                    <th>Краткое содержание</th>
+                    <th>Акции</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for post in posts %}
+                    <tr>
+                        <td>{{ post.id }}</td>
+                        <td>{{ post.tittle }}</td>
+                        <td>{{ post.overview|slice(0, 200) }} ...</td>
+                        <td>
+                            <a class="btn btn-sm btn-info" href="{{ path('admin_post_edit', {'post': post.id}) }}">Редатировать</a>
+                            <a class="btn btn-sm btn-danger" href="{{ path('admin_post_remove', {'post': post.id}) }}">Удалить</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

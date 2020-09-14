@@ -3,5 +3,22 @@
 {% block title %}Index Page{% endblock %}
 
 {% block body %}
+    {% include 'page/components/navbar.html.twig' %}
 
+    <section class="container">
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-{{ label }}">
+                    {{ message|trans() }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+        <h1 class="font-weight-bold mt-5">Тестовое задание:</h1>
+        <p>
+            Спарсить (программно) первые 15 новостей с rbk.ru (блок, откуда брать новости показан на скриншоте) и
+            вставить в базу данных (составить структуру самому) или в файл. Вывести все новости, сократив текст до 200
+            символов в качестве описания, со ссылкой на полную новость с кнопкой подробнее. На полной новости выводить
+            картинку если есть в новости.
+        </p>
+    </section>
 {% endblock %}

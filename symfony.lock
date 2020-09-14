@@ -81,6 +81,9 @@
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
     },
+    "kub-at/php-simple-html-dom-parser": {
+        "version": "1.9.1"
+    },
     "laminas/laminas-code": {
         "version": "3.4.1"
     },
@@ -137,6 +140,9 @@
         "files": [
             "./config/packages/sensio_framework_extra.yaml"
         ]
+    },
+    "sunra/php-simple-html-dom-parser": {
+        "version": "v1.5.2"
     },
     "symfony/apache-pack": {
         "version": "1.0",

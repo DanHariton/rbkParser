@@ -1,0 +1,28 @@
+{% extends 'page/layout.html.twig' %}
+
+{% block title %}{{ tittle }}{% endblock %}
+
+{% block body %}
+    {% include 'page/components/navbar.html.twig' %}
+    <section class="container">
+        <h1 class="font-weight-bold text-center mt-5 mb-4">{{ post.tittle }}</h1>
+        <h3 class="font-weight-bolder text-justify">{{ post.overview }}</h3>
+        {% if post.image != null %}
+            <div class="text-center mt-3 mb-3">
+                <img class="w-75" src="{{ post.image }}" alt="{{ post.tittle }}">
+            </div>
+        {% endif %}
+        {% for content in post.content %}
+            <p class="text-justify">{{ content }}</p>
+        {% endfor %}
+        <div class="border-top pt-4">
+            <strong>{{ post.author }}</strong>
+            <div class="d-flex flex-row">
+                <p class="font-weight-bold mr-2">Теги:</p>
+                {% for category in post.categories %}
+                    <p class="ml-1">{{ category }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

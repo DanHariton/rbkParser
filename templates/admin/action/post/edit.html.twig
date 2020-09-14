@@ -1,0 +1,34 @@
+{% extends 'admin/layout.nav.html.twig' %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h4 class="m-0 font-weight-bold text-primary">Отредактируй новость</h4>
+        </div>
+        <div class="card-body">
+            {{ form_start(form) }}
+            <div>
+                {{ form_errors(form) }}
+            </div>
+
+            <div>
+                {{ form_label(form.tittle, null, {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.tittle, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div>
+                {{ form_label(form.overview, null, {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.overview, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div>
+                {{ form_label(form.image, null, {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.image, {'attr': {'class': 'form-control'}}) }}
+            </div>
+            <div>
+                {{ form_label(form.content, null, {'label_attr': {'class': 'form-label'}}) }}
+                {{ form_widget(form.content, {'attr': {'class': 'form-control'}}) }}
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
